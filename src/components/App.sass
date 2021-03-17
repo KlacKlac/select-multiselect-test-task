@@ -1,0 +1,87 @@
+*
+    box-sizing: border-box
+    
+body, html
+    padding: 0
+    margin: 0
+
+body
+    background: linear-gradient(45deg, #c1b8f0, #d3ffe8) 0 0 / cover no-repeat
+    font-family: sans-serif
+    font-size: 18px
+    
+button, input, select
+    outline: none
+
+.container
+    max-width: 900px
+    padding: 30px
+    margin: 0 auto
+    width: 100%
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    
+.error
+    font-weight: bold
+    color: #a51919
+
+.form
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center    
+
+.select, .multiselect
+    width: 300px
+    padding: 7px 10px
+    background-color: transparentize(#ffffff, .7)
+    border: 2px solid #210a46
+    border-radius: 10px
+    font-size: 16px
+    
+.select
+    margin-bottom: 20px    
+    
+.multiselect
+    &__search
+        width: 100%
+        margin-bottom: 10px
+        padding: 7px
+    &__option
+        margin: 0
+        padding: 7px
+        border-radius: 5px
+        position: relative
+        cursor: pointer
+        transition: all ease 0.3s
+        &:hover
+            background-color: transparentize(#000000, .9)
+        &:not(:last-child)
+            margin-bottom: 10px
+        &_selected::after
+            position: absolute
+            width: 15px
+            height: 100%
+            display: flex
+            align-items: center
+            top: 0
+            right: 0
+            content: '\2714'
+
+.pagination
+    display: flex
+    justify-content: center
+    position: relative
+    height: 22px
+    &__button
+        position: absolute
+        top: 0
+        &_back
+            left: 0
+        &_next
+            right: 0
+    &__number
+        margin: 0
+        font-size: 16px
